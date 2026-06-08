@@ -1,268 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-       <!-- Google tag (gtag.js) --> 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0R4HJ355L"></script>
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1176570317466461"
-     crossorigin="anonymous"></script>
-    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-R0R4HJ355L'); </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Core Technologies - Expert Windows/Office installation, software sales, IT consulting, phone/laptop repair, printing, photography, video editing, and movie downloads in Kampala, Uganda.">
-    <meta name="keywords" content="Windows installation Kampala, Office installation Uganda, software sales Kampala, phone repair Kampala, laptop repair Uganda, movie downloads Kampala, video editing Kampala, photography services Uganda, IT services Kampala, printing services Kampala">
-    <meta name="robots" content="index, follow">
-    <title>Core Technologies | Windows Installation, Software Sales, Repairs & Media Services in Kampala</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background: #f9f9f9; color: #333; line-height: 1.6; }
-        .navbar { background: #0d3b66; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .navbar-brand img { height: 50px; margin-right: 10px; }
-        .navbar-brand span { font-weight: 700; font-size: 1.4rem; }
-        .hero { background: linear-gradient(rgba(13,59,102,0.9), rgba(13,59,102,0.9)), url('https://images.unsplash.com/photo-1519389951291-3a50e1e52b44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat; color: white; padding: 120px 0; }
-        .section { padding: 100px 0; }
-        .service-card { background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); padding: 30px; transition: all 0.3s ease; height: 100%; text-align: center; }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
-        .service-card i { font-size: 2.5rem; color: #0d3b66; margin-bottom: 20px; }
-        .btn-primary { background: #0d3b66; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 600; }
-        .btn-primary:hover { background: #0a2b4d; }
-        footer { background: #0d3b66; color: white; padding: 50px 0; }
-        h2, h4 { color: #0d3b66; }
-        .partner-logo { height: 80px; object-fit: contain; filter: grayscale(20%); transition: filter 0.3s; }
-        .partner-logo:hover { filter: grayscale(0%); }
-        .social-icons a { color: white; font-size: 1.8rem; margin: 0 15px; transition: opacity 0.3s; }
-        .social-icons a:hover { opacity: 0.7; }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Core Technologies Uganda | IT Services, Repairs & Media – Kampala</title>
+<meta name="description" content="Kampala's trusted tech hub. Windows installation, laptop repairs, printing, photography, and media services. Fast, affordable, professional."/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --blue:#1a56db;--blue-dark:#1042b5;--blue-light:#e8f0fe;
+    --green:#16a34a;--text:#111827;--muted:#6b7280;
+    --bg:#f9fafb;--white:#fff;--border:#e5e7eb;
+    --radius:10px;--shadow:0 2px 12px rgba(0,0,0,.08)
+  }
+  body{font-family:'Segoe UI',sans-serif;color:var(--text);background:var(--bg);line-height:1.6;font-size:15px}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
 
-    
+  /* NAV */
+  nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;padding:0 5%}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1100px;margin:auto}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--blue)}
+  .logo-icon{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center}
+  .logo-icon svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round}
+  .nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+  .nav-links a:hover{color:var(--blue)}
+  .nav-cta{background:var(--blue);color:#fff;padding:9px 20px;border-radius:8px;font-size:14px;font-weight:600;transition:.2s}
+  .nav-cta:hover{background:var(--blue-dark)}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,#0f2e6e 0%,#1a56db 60%,#1e8e5e 100%);color:#fff;padding:80px 5% 70px;text-align:center}
+  .hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:5px 16px;font-size:13px;margin-bottom:20px}
+  .hero h1{font-size:clamp(28px,5vw,52px);font-weight:800;line-height:1.15;max-width:700px;margin:0 auto 18px}
+  .hero h1 span{color:#7ee8a2}
+  .hero p{font-size:17px;opacity:.85;max-width:520px;margin:0 auto 32px}
+  .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn-primary{background:#fff;color:var(--blue);padding:13px 26px;border-radius:8px;font-weight:700;font-size:15px;transition:.2s}
+  .btn-primary:hover{background:#e8f0fe}
+  .btn-wa{background:#25d366;color:#fff;padding:13px 26px;border-radius:8px;font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px;transition:.2s}
+  .btn-wa:hover{background:#1ebe5c}
+  .wa-icon{width:20px;height:20px}
+  .hero-stats{display:flex;gap:40px;justify-content:center;margin-top:48px;flex-wrap:wrap}
+  .hero-stat{text-align:center}
+  .hero-stat strong{display:block;font-size:28px;font-weight:800}
+  .hero-stat span{font-size:13px;opacity:.7}
+
+  /* TRUST BAR */
+  .trust-bar{background:var(--white);border-bottom:1px solid var(--border);padding:14px 5%;text-align:center;font-size:13px;color:var(--muted)}
+  .trust-bar strong{color:var(--green)}
+
+  /* SECTIONS */
+  section{padding:64px 5%;max-width:1100px;margin:auto}
+  .section-label{font-size:13px;font-weight:600;color:var(--blue);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+  .section-title{font-size:clamp(22px,3vw,34px);font-weight:800;margin-bottom:10px}
+  .section-sub{color:var(--muted);max-width:540px;margin-bottom:40px}
+
+  /* SERVICES GRID */
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .service-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:.2s;cursor:default}
+  .service-card:hover{border-color:#93c5fd;box-shadow:var(--shadow);transform:translateY(-2px)}
+  .svc-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:22px}
+  .svc-icon.blue{background:#dbeafe}
+  .svc-icon.green{background:#dcfce7}
+  .svc-icon.orange{background:#fff7ed}
+  .svc-icon.purple{background:#f3e8ff}
+  .svc-icon.red{background:#fee2e2}
+  .svc-icon.teal{background:#ccfbf1}
+  .service-card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+  .service-card p{font-size:13px;color:var(--muted);margin-bottom:14px}
+  .price-tag{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px}
+
+  /* WHY US */
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+  .why-card{text-align:center;padding:28px 20px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius)}
+  .why-num{font-size:36px;font-weight:900;color:var(--blue)}
+  .why-card h4{font-weight:700;margin:6px 0 4px}
+  .why-card p{font-size:13px;color:var(--muted)}
+
+  /* TESTIMONIALS */
+  .testimonials-bg{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:64px 5%}
+  .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;max-width:1100px;margin:40px auto 0}
+  .testi-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:22px;position:relative}
+  .testi-card::before{content:'\201C';font-size:52px;color:var(--blue);line-height:1;position:absolute;top:10px;left:20px;opacity:.25;font-family:Georgia,serif}
+  .testi-card p{font-size:14px;color:var(--text);margin-bottom:16px;padding-top:20px}
+  .testi-author{display:flex;align-items:center;gap:10px}
+  .avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff}
+  .avatar.a{background:#1a56db}.avatar.b{background:#16a34a}.avatar.c{background:#9333ea}
+  .testi-name{font-weight:700;font-size:14px}
+  .testi-role{font-size:12px;color:var(--muted)}
+  .stars{color:#f59e0b;font-size:13px;margin-bottom:4px}
+
+  /* PROCESS */
+  .process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;position:relative}
+  .process-steps::before{content:'';position:absolute;top:32px;left:10%;right:10%;height:2px;background:var(--border);z-index:0}
+  .step{text-align:center;position:relative;z-index:1;padding:0 10px}
+  .step-num{width:64px;height:64px;border-radius:50%;background:var(--blue);color:#fff;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:4px solid var(--bg)}
+  .step h4{font-weight:700;margin-bottom:6px}
+  .step p{font-size:13px;color:var(--muted)}
+
+  /* CONTACT */
+  .contact-bg{background:linear-gradient(135deg,#0f2e6e,#1a56db);padding:64px 5%;color:#fff}
+  .contact-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .contact-info h2{font-size:32px;font-weight:800;margin-bottom:14px}
+  .contact-info p{opacity:.8;margin-bottom:28px}
+  .contact-detail{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+  .contact-detail-icon{width:40px;height:40px;background:rgba(255,255,255,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .contact-detail-icon svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .contact-detail strong{display:block;font-size:14px;margin-bottom:2px}
+  .contact-detail span{font-size:13px;opacity:.7}
+  .contact-form{background:#fff;border-radius:12px;padding:28px;color:var(--text)}
+  .contact-form h3{font-size:18px;font-weight:700;margin-bottom:20px;color:var(--text)}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .form-group{margin-bottom:14px}
+  .form-group label{display:block;font-size:13px;font-weight:600;margin-bottom:5px;color:var(--muted)}
+  .form-group input,.form-group textarea,.form-group select{width:100%;border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit;background:var(--bg);color:var(--text);outline:none}
+  .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--blue);background:#fff}
+  .form-group textarea{resize:vertical;min-height:90px}
+  .submit-btn{width:100%;background:var(--blue);color:#fff;border:none;border-radius:8px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;transition:.2s;font-family:inherit}
+  .submit-btn:hover{background:var(--blue-dark)}
+
+  /* FOOTER */
+  footer{background:#0a1628;color:#cdd5e0;padding:48px 5% 28px}
+  .footer-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+  .footer-logo{font-size:20px;font-weight:800;color:#fff;margin-bottom:12px}
+  .footer-desc{font-size:14px;opacity:.7;max-width:280px;line-height:1.7}
+  .footer-col h5{font-size:14px;font-weight:700;color:#fff;margin-bottom:14px}
+  .footer-col a{display:block;font-size:13px;color:#9ba8b8;margin-bottom:8px;transition:.15s}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{max-width:1100px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;font-size:12px;color:#6b7280;flex-wrap:wrap;gap:8px}
+
+  /* FLOATING WA */
+  .float-wa{position:fixed;bottom:28px;right:24px;background:#25d366;color:#fff;border-radius:50px;padding:12px 22px 12px 16px;display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px;box-shadow:0 4px 20px rgba(37,211,102,.4);z-index:999;cursor:pointer;transition:.2s}
+  .float-wa:hover{background:#1ebe5c;transform:scale(1.04)}
+  .float-wa svg{width:22px;height:22px}
+
+  .badge-green{display:inline-block;background:#dcfce7;color:#15803d;font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px;margin-right:6px}
+
+  @media(max-width:700px){
+    .contact-inner,.footer-inner{grid-template-columns:1fr}
+    .form-row{grid-template-columns:1fr}
+    .nav-links{display:none}
+    .process-steps::before{display:none}
+  }
+</style>
 </head>
- 
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="./logo.jpg" alt="Core Technologies Logo">
-                <span>Core Technologies</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+<!-- FLOATING WHATSAPP -->
+<a class="float-wa" href="https://wa.me/256726859577" target="_blank" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.532 5.864L.057 23.882l6.177-1.621A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 11.999 0zm.001 21.818a9.818 9.818 0 01-5.011-1.376l-.359-.214-3.666.963.979-3.578-.235-.374A9.819 9.819 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+  Chat with us
+</a>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      </div>
+      Core Technologies
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Get a Quote</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">📍 Serving Kampala & Greater Uganda</div>
+  <h1>Your Trusted <span>Tech Hub</span> in Kampala</h1>
+  <p>Fast, affordable IT solutions — repairs, installations, printing, photography & media services. We fix it right, the first time.</p>
+  <div class="hero-btns">
+    <a class="btn-primary" href="#services">Explore Services</a>
+    <a class="btn-wa" href="https://wa.me/256726859577" target="_blank">
+      <svg class="wa-icon" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.532 5.864L.057 23.882l6.177-1.621A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 11.999 0zm.001 21.818a9.818 9.818 0 01-5.011-1.376l-.359-.214-3.666.963.979-3.578-.235-.374A9.819 9.819 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+      WhatsApp Us Now
+    </a>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>500+</strong><span>Happy Clients</span></div>
+    <div class="hero-stat"><strong>5★</strong><span>Avg. Rating</span></div>
+    <div class="hero-stat"><strong>Same Day</strong><span>Most Repairs</span></div>
+    <div class="hero-stat"><strong>3+</strong><span>Years in Kampala</span></div>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <strong>✓ Trusted by 500+ clients across Kampala</strong> &nbsp;·&nbsp; Windows &amp; Office Installations &nbsp;·&nbsp; Device Repairs &nbsp;·&nbsp; Printing &amp; Media &nbsp;·&nbsp; IT Consulting
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">What we offer</div>
+  <div class="section-title">Our Services</div>
+  <p class="section-sub">Professional tech solutions for individuals and businesses — fast turnaround, affordable pricing, guaranteed quality.</p>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="svc-icon blue">💻</div>
+      <h3>Windows Installation</h3>
+      <p>Fresh Windows 10/11 setup, upgrades, drivers, activation. Your laptop running like new.</p>
+      <span class="price-tag">From UGX 30,000</span>
+    </div>
+
+    <div class="service-card">
+      <div class="svc-icon green">📦</div>
+      <h3>Software Installation</h3>
+      <p>Microsoft Office, antivirus, Adobe Creative Suite and more — properly configured.</p>
+      <span class="price-tag">From UGX 20,000</span>
+    </div>
+
+    <div class="service-card">
+      <div class="svc-icon orange">🔧</div>
+      <h3>Phone & Laptop Repairs</h3>
+      <p>Screen replacement, battery fixes, virus removal, hardware upgrades & diagnostics.</p>
+      <span class="price-tag">From UGX 30,000</span>
+    </div>
+
+    <div class="service-card">
+      <div class="svc-icon purple">🖥️</div>
+      <h3>IT Consulting</h3>
+      <p>Active Directory, servers, databases, VMware virtualisation for businesses and organisations.</p>
+      <span class="price-tag">From UGX 50,000</span>
+    </div>
+
+    <div class="service-card">
+      <div class="svc-icon red">🖨️</div>
+      <h3>Printing & Photocopying</h3>
+      <p>High-quality printing and photocopying for all your documents, CVs, flyers, and business materials.</p>
+      <span class="price-tag">From UGX 500/page</span>
+    </div>
+
+    <div class="service-card">
+      <div class="svc-icon teal">📸</div>
+      <h3>Photography & Video</h3>
+      <p>Professional photography, video production, editing and media download services.</p>
+      <span class="price-tag">From UGX 50,000</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
+<div id="why-us" style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <section style="padding:64px 0">
+    <div class="section-label">Why choose us</div>
+    <div class="section-title">The Core Technologies difference</div>
+    <p class="section-sub">We're not just a repair shop — we're your long-term technology partners.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">⚡</div>
+        <h4>Fast Turnaround</h4>
+        <p>Most repairs completed same day. No endless waiting.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">💰</div>
+        <h4>Affordable Pricing</h4>
+        <p>Transparent, fair prices. No hidden charges, ever.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">🛡️</div>
+        <h4>Quality Guarantee</h4>
+        <p>We stand behind our work. Not satisfied? We fix it free.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">👨‍💼</div>
+        <h4>Expert Technicians</h4>
+        <p>Certified professionals with years of hands-on experience.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="section-label">Simple process</div>
+  <div class="section-title">How it works</div>
+  <p class="section-sub">Getting help is easy — just three steps.</p>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Contact Us</h4>
+      <p>WhatsApp, call, or fill our form. We respond within minutes.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Bring Your Device</h4>
+      <p>Visit us in Kampala or we can arrange pickup for bulk jobs.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>We Fix &amp; Deliver</h4>
+      <p>Quick, professional service. Collect your device good as new.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials-bg" id="testimonials">
+  <div style="max-width:1100px;margin:auto">
+    <div class="section-label">Client reviews</div>
+    <div class="section-title">What our clients say</div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>They installed Windows and all my software in under an hour. Very professional, very affordable. I'll always come back here.</p>
+        <div class="testi-author">
+          <div class="avatar a">AK</div>
+          <div><div class="testi-name">Amara Kiwanuka</div><div class="testi-role">Student, Makerere University</div></div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Core Technologies</h1>
-            <p class="lead mb-4">Your Trusted Partner for IT Solutions, Device Repairs, Software Installation & Media Services in Kampala</p>
-            <p class="fs-5 mb-4">Windows/Office installation • Phone & Laptop Repairs • Custom Printing • Photography • Video Editing • Movie Downloads</p>
-            <a href="#contact" class="btn btn-primary btn-lg">Get a Quote</a>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>My laptop screen was cracked and they fixed it same day at a fair price. Great service — I've referred all my colleagues.</p>
+        <div class="testi-author">
+          <div class="avatar b">JM</div>
+          <div><div class="testi-name">James Mugisha</div><div class="testi-role">Business Owner, Nakasero</div></div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section bg-white">
-        <div class="container">
-            <h2 class="text-center mb-5">About Core Technologies</h2>
-            <p class="text-center lead col-lg-8 mx-auto">Core Technologies is a professional tech hub based in Kampala, Uganda. We deliver reliable IT consulting, software installations, device repairs, printing, photography, video editing, and media services. Our goal is to provide fast, affordable, and high-quality solutions to businesses and individuals across Uganda.</p>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>Used their printing and photography services for our NGO event. Everything was top quality and delivered on time. Highly recommend!</p>
+        <div class="testi-author">
+          <div class="avatar c">RN</div>
+          <div><div class="testi-name">Rachel Namutebi</div><div class="testi-role">Programme Officer, Kampala NGO</div></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="text-center mb-5">Our Services</h2>
-            <div class="row g-4">
+<!-- CONTACT -->
+<div class="contact-bg" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>Ready to get your device fixed, software installed, or a service quote? Reach us instantly — we respond fast!</p>
 
-                <!-- Software & Installation -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <i class="bi bi-windows"></i>
-                        <h4>Windows Installation</h4>
-                        <p>Fresh Windows 10/11 installation, upgrades, drivers & activation.</p>
-                        <p><strong>From UGX 30,000</strong></p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <i class="bi bi-microsoft"></i>
-                        <h4>Office & Software Installation</h4>
-                        <p>Microsoft Office, antivirus, Adobe suite & other software setup.</p>
-                        <p><strong>From UGX 20,000</strong></p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <i class="bi bi-key"></i>
-                        <h4>Software Sales</h4>
-                        <p>Licensed Windows, Office, antivirus & software keys.</p>
-                        <p><strong>Contact for quotes</strong></p>
-                    </div>
-                </div>
-
-                <!-- Repairs & IT -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <i class="bi bi-phone"></i>
-                        <h4>Phone & Laptop Repair</h4>
-                        <p>Screen replacement, battery fixes, software troubleshooting.</p>
-                        <p><strong>From UGX 30,000</strong></p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <i class="bi bi-pc-display"></i>
-                        <h4>Desktop & Computer Repair</h4>
-                        <p>Hardware upgrades, virus removal, full diagnostics.</p>
-                        <p><strong>From UGX 50,000</strong></p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <i class="bi bi-server"></i>
-                        <h4>IT Consulting & Setup</h4>
-                        <p>Active Directory, servers, databases, VMware virtualization.</p>
-                        <p><strong>From UGX 50,000</strong></p>
-                    </div>
-                </div>
-
-                <!-- Media & Printing -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <i class="bi bi-film"></i>
-                        <h4>Movie Downloads & Sales</h4>
-                        <p>Latest movies/series on flash drives, HDDs or your phone.</p>
-                        <p><strong>From UGX 10,000</strong></p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <i class="bi bi-camera"></i>
-                        <h4>Professional Photography</h4>
-                        <p>Events, portraits, product shoots, weddings.</p>
-                        <p><strong>From UGX 100,000</strong></p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <i class="bi bi-scissors"></i>
-                        <h4>Video Editing</h4>
-                        <p>Professional editing for events, YouTube, ads.</p>
-                        <p><strong>From UGX 50,000</strong></p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <i class="bi bi-printer"></i>
-                        <h4>Custom Printing</h4>
-                        <p>Business cards, flyers, t-shirts, banners.</p>
-                        <p><strong>From UGX 5,000</strong></p>
-                    </div>
-                </div>
-
-            </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
         </div>
-    </section>
-
-    <!-- Partners Section -->
-    <section id="partners" class="section bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Our Trusted Partners</h2>
-            <p class="text-center lead col-lg-8 mx-auto mb-5">We collaborate with leading experts to deliver top-quality services in repairs, media production, and entertainment.</p>
-            <div class="row g-5 text-center align-items-center">
-                <div class="col-md-4">
-                    <div class="p-4">
-                        <img src="https://dcassetcdn.com/design_img/3650080/733024/733024_20694457_3650080_7be9bf8e_image.png" alt="Savi Media Logo" class="partner-logo mb-3">
-                        <h5>Savi Media</h5>
-                        <p>Professional Photography & Video Production</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4">
-                        <img src="./Acramlogo.jpg" alt="Scrambled Media Logo" class="partner-logo mb-3">
-                        <h5>Acram Media</h5>
-                        <p>Latest Movies & Series Downloads</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4">
-                        <img src="./logo.jpg" alt="HDMI Computers Logo" class="partner-logo mb-3">
-                        <h5>HDMI Computers</h5>
-                        <p>Expert Phone, Laptop & Desktop Repairs</p>
-                    </div>
-                </div>
-                
-            </div>
-            <p class="text-center mt-4"><em>Together, we provide complete tech and media solutions in Kampala.</em></p>
+        <div>
+          <strong>Phone / WhatsApp</strong>
+          <span>+256 726 859 577</span>
         </div>
-    </section>
+      </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-white">
-        <div class="container">
-            <h2 class="text-center mb-5">Get in Touch</h2>
-            <p class="text-center mb-5 col-lg-8 mx-auto">Ready for Windows installation, repairs, printing, or any service? Send us a message – we respond quickly!</p>
-            <form action="https://formspree.io/f/meoywgpy" method="POST" class="col-lg-6 mx-auto">
-                <div class="mb-3">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-                <div class="mb-3">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                </div>
-                <div class="mb-3">
-                    <input type="tel" name="phone" class="form-control" placeholder="Phone / WhatsApp" required>
-                </div>
-                <div class="mb-3">
-                    <textarea name="message" class="form-control" rows="5" placeholder="Describe your needs (e.g., Windows installation, phone repair, movie downloads)" required></textarea>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                </div>
-            </form>
-            <p class="text-center mt-5">WhatsApp/Call: +256-726859577 | Email: coretech291@gmail.com | Kampala, Uganda</p>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="container">
-            <p class="mb-3">&copy; 2025 Core Technologies. All rights reserved.</p>
-            <p class="mb-4">Reliable IT, Repair & Media Services in Kampala, Uganda</p>
-            
-            <!-- Social Media Icons -->
-            <div class="social-icons">
-                <a href="https://x.com/yourusername" target="_blank" aria-label="X (Twitter)">
-                    <i class="bi bi-twitter-x"></i>
-                </a>
-                <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://tiktok.com/@yourusername" target="_blank" aria-label="TikTok">
-                    <i class="bi bi-tiktok"></i>
-                </a>
-                <a href="https://wa.me/256726859577" target="_blank" aria-label="WhatsApp">
-                    <i class="bi bi-whatsapp"></i>
-                </a>
-            </div>
+        <div>
+          <strong>Email</strong>
+          <span>coretech291@gmail.com</span>
         </div>
-    </footer>
+      </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <strong>Location</strong>
+          <span>Kampala, Uganda</span>
+        </div>
+      </div>
+
+      <div style="margin-top:28px">
+        <span class="badge-green">✓ Usually replies within 5 minutes</span>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>📋 Request a Service</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="e.g. John Ssekandi"/>
+        </div>
+        <div class="form-group">
+          <label>Phone / WhatsApp</label>
+          <input type="tel" placeholder="+256 ..."/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select>
+          <option>Select a service...</option>
+          <option>Windows Installation</option>
+          <option>Software Installation</option>
+          <option>Laptop / Phone Repair</option>
+          <option>IT Consulting</option>
+          <option>Printing & Photocopying</option>
+          <option>Photography / Video</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Describe your issue or request</label>
+        <textarea placeholder="Tell us what you need help with..."></textarea>
+      </div>
+      <button class="submit-btn" onclick="this.textContent='✓ Sent! We\'ll contact you shortly';this.style.background='#16a34a'">
+        Send Request →
+      </button>
+      <p style="font-size:12px;color:#9ca3af;text-align:center;margin-top:10px">Or WhatsApp us directly: +256 726 859 577</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">⚡ Core Technologies</div>
+      <p class="footer-desc">Your trusted tech hub in Kampala. Fast, affordable, professional IT services, repairs, and media solutions.</p>
+      <p style="font-size:13px;color:#6b7280;margin-top:14px">📞 +256 726 859 577</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <a href="#services">Windows Installation</a>
+      <a href="#services">Software Setup</a>
+      <a href="#services">Device Repair</a>
+      <a href="#services">IT Consulting</a>
+      <a href="#services">Printing</a>
+      <a href="#services">Photography</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#why-us">Why Choose Us</a>
+      <a href="#testimonials">Client Reviews</a>
+      <a href="#contact">Contact Us</a>
+      <a href="https://wa.me/256726859577" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Core Technologies Uganda. All rights reserved.</span>
+    <span>Kampala, Uganda · coretech291@gmail.com</span>
+  </div>
+</footer>
+
 </body>
 </html>
